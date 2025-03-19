@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Waveshare", "Waveshare\Wave
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Waveshare.Test", "Waveshare.Test\Waveshare.Test.csproj", "{CC7FCF15-9AED-4909-AB04-BA166FB60453}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Waveshare.EPaperDisplay.Bitmap", "Waveshare.EPaperDisplay.Bitmap\Waveshare.EPaperDisplay.Bitmap.csproj", "{693FBAE8-E3A1-498D-97BE-EB2147C27A0A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Waveshare.EPaperDisplay.SkiaSharp", "Waveshare.EPaperDisplay.SkiaSharp\Waveshare.EPaperDisplay.SkiaSharp.csproj", "{362453A9-DD85-4E4C-84F4-FE1EE0BE8B39}"
 EndProject
 Global
@@ -31,10 +29,6 @@ Global
 		{CC7FCF15-9AED-4909-AB04-BA166FB60453}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC7FCF15-9AED-4909-AB04-BA166FB60453}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC7FCF15-9AED-4909-AB04-BA166FB60453}.Release|Any CPU.Build.0 = Release|Any CPU
-		{693FBAE8-E3A1-498D-97BE-EB2147C27A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{693FBAE8-E3A1-498D-97BE-EB2147C27A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{693FBAE8-E3A1-498D-97BE-EB2147C27A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{693FBAE8-E3A1-498D-97BE-EB2147C27A0A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{362453A9-DD85-4E4C-84F4-FE1EE0BE8B39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{362453A9-DD85-4E4C-84F4-FE1EE0BE8B39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{362453A9-DD85-4E4C-84F4-FE1EE0BE8B39}.Release|Any CPU.ActiveCfg = Release|Any CPU

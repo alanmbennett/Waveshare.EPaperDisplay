@@ -66,27 +66,14 @@ namespace Waveshare
         /// <returns></returns>
         internal static IEPaperDisplayInternal CreateEPaperDisplay(EPaperDisplayType displayType)
         {
-            IEPaperDisplayInternal display;
-
-            switch (displayType)
+            IEPaperDisplayInternal display = displayType switch
             {
-                case EPaperDisplayType.WaveShare7In5Bc:
-                    display = new Epd7In5Bc();
-                    break;
-                case EPaperDisplayType.WaveShare7In5_V2:
-                    display = new Epd7In5_V2();
-                    break;
-                case EPaperDisplayType.WaveShare7In5b_V2:
-                    display = new Epd7In5b_V2();
-                    break;
-                case EPaperDisplayType.WaveShare5In65f:
-                    display = new Epd5in65f();
-                    break;
-                default:
-                    display = null;
-                    break;
-            }
-
+                EPaperDisplayType.WaveShare7In5Bc => new Epd7In5Bc(),
+                EPaperDisplayType.WaveShare7In5_V2 => new Epd7In5_V2(),
+                EPaperDisplayType.WaveShare7In5b_V2 => new Epd7In5b_V2(),
+                EPaperDisplayType.WaveShare5In65f => new Epd5in65f(),
+                _ => null,
+            };
             display?.Initialize(EPaperDisplayHardware.Value);
 
             return display;

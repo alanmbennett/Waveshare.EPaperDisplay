@@ -26,6 +26,7 @@
 #region Usings
 
 using System;
+using SkiaSharp;
 using Waveshare.Interfaces;
 using Waveshare.Interfaces.Internal;
 
@@ -33,7 +34,7 @@ using Waveshare.Interfaces.Internal;
 
 namespace Waveshare.Image
 {
-    internal class SKBitmapLoader : EPaperImageBase<SkiaSharp.SKBitmap>, IEPaperDisplaySKBitmap
+    internal class SKBitmapLoader : EPaperImageBase<SKBitmap>, IEPaperDisplaySKBitmap
     {
         //########################################################################################
 
@@ -58,15 +59,19 @@ namespace Waveshare.Image
         /// </summary>
         /// <param name="image"></param>
         /// <returns></returns>
-        protected override IRawImage LoadImage(SkiaSharp.SKBitmap image)
+        protected override IRawImage LoadImage(SKBitmap image)
         {
             var maxWith = Math.Min(Width, image.Width);
             var maxHeight = Math.Min(Height, image.Height);
 
-            var subSet = new SkiaSharp.SKBitmap();
-            image.ExtractSubset(subSet, new SkiaSharp.SKRectI(0, 0, maxWith, maxHeight));
+            var subSet = new SKBitmap();
+            image.ExtractSubset(subSet, new SKRectI(0, 0, maxWith, maxHeight));
 
-            return new SKBitmapRawImage(image.Resize(new SkiaSharp.SKImageInfo(maxWith, maxHeight, SkiaSharp.SKColorType.Bgra8888), SkiaSharp.SKFilterQuality.High));
+            var resizedImage = image.Resize(
+                new SKImageInfo(maxWith, maxHeight, SKColorType.Bgra8888),
+                SKSamplingOptions.Default
+            );
+            return new SKBitmapRawImage(resizedImage);
         }
 
         #endregion Protected Methods
