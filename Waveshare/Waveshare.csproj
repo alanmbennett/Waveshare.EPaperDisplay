@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>eXoCooLd.Waveshare.EPaperDisplay</PackageId>
+    <PackageId>alanmbennett.Waveshare.EPaperDisplay</PackageId>
     <Authors>André Wehrli, Greg Cannon, Alan Bennett</Authors>
     <Product>Waveshare E-Paper Display Library</Product>
     <Company>Private Project</Company>

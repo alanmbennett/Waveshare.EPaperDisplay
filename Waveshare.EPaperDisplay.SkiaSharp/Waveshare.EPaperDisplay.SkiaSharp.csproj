@@ -4,14 +4,15 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>alanmbennett.Waveshare.EPaperDisplay.SkiaSharp</PackageId>
     <Version>1.0.6</Version>
     <Authors>André Wehrli</Authors>
     <Company>Private Project</Company>
     <Product>Waveshare E-Paper Display Library for SKBitmaps</Product>
     <Description>Library for .Net Core to control a Waveshare E-Paper Display and send  SkiaSharp.SKBitmap to it</Description>
     <Copyright>André Wehrli</Copyright>
-    <PackageProjectUrl>https://github.com/eXoCooLd/Waveshare.EPaperDisplay</PackageProjectUrl>
-    <RepositoryType>https://github.com/eXoCooLd/Waveshare.EPaperDisplay</RepositoryType>
+    <PackageProjectUrl>https://github.com/alanmbennett/Waveshare.EPaperDisplay</PackageProjectUrl>
+    <RepositoryType>https://github.com/alanmbennett/Waveshare.EPaperDisplay</RepositoryType>
     <PackageTags>epaper e-paperdisplay waveshare-eink</PackageTags>
     <PackageReleaseNotes>Send a SkiaSharp.SKBitmap to the Waveshare E-Paper Display</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
