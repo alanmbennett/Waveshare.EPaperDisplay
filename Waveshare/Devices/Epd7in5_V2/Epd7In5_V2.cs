@@ -155,18 +155,18 @@ namespace Waveshare.Devices.Epd7in5_V2
         protected override void DeviceInitialize()
         {
             Reset();
+            
+            SendCommand(Epd7In5_V2Commands.PowerSetting);
+            SendData(0x07); // VGH: 20V
+            SendData(0x07); // VGL: -20V
+            SendData(0x3f); // VDH: 15V
+            SendData(0x3f); // VDL: -15V
 
             SendCommand(Epd7In5_V2Commands.BoosterSoftStart);
             SendData(0x17);
             SendData(0x17);
             SendData(0x27);
             SendData(0x17);
-
-            SendCommand(Epd7In5_V2Commands.PowerSetting);
-            SendData(0x07); // VGH: 20V
-            SendData(0x17); // VGL: -20V
-            SendData(0x3f); // VDH: 15V
-            SendData(0x3f); // VDL: -15V
 
             SendCommand(Epd7In5_V2Commands.PowerOn);
             Thread.Sleep(100);

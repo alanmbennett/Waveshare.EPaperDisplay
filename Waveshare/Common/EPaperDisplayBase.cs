@@ -229,11 +229,11 @@ namespace Waveshare.Common
         public void Reset()
         {
             EPaperDisplayHardware.ResetPin = PinValue.High;
-            Thread.Sleep(200);
+            Thread.Sleep(20);
             EPaperDisplayHardware.ResetPin = PinValue.Low;
             Thread.Sleep(2);
             EPaperDisplayHardware.ResetPin = PinValue.High;
-            Thread.Sleep(200);
+            Thread.Sleep(20);
         }
 
         /// <summary>
