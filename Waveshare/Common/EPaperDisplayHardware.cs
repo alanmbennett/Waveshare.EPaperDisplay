@@ -59,6 +59,11 @@ namespace Waveshare.Common
         /// GPIO SPI CS Pin Number
         /// </summary>
         private const int GpioSpiCsPin = 8;
+        
+        /// <summary>
+        /// GPIO Power Pin Number
+        /// </summary>
+        private const int GpioPowerPin = 18;
 
         /// <summary>
         /// GPIO Busy Pin Number
@@ -144,13 +149,16 @@ namespace Waveshare.Common
             GpioController?.OpenPin(GpioSpiDcPin);
             GpioController?.OpenPin(GpioSpiCsPin);
             GpioController?.OpenPin(GpioBusyPin);
+            GpioController?.OpenPin(GpioPowerPin);
 
+            GpioController?.SetPinMode(GpioBusyPin, PinMode.Input);
             GpioController?.SetPinMode(GpioResetPin, PinMode.Output);
             GpioController?.SetPinMode(GpioSpiDcPin, PinMode.Output);
             GpioController?.SetPinMode(GpioSpiCsPin, PinMode.Output);
-            GpioController?.SetPinMode(GpioBusyPin, PinMode.Input);
+            GpioController?.SetPinMode(GpioPowerPin, PinMode.Output);
 
             GpioController?.Write(GpioSpiCsPin, PinValue.High);
+            GpioController?.Write(GpioPowerPin, PinValue.High);
 
             SpiDevice = spiDevice;
         }
@@ -163,6 +171,7 @@ namespace Waveshare.Common
             if (disposing)
             {
                 GpioController?.Write(GpioSpiCsPin, PinValue.Low);
+                GpioController?.Write(GpioPowerPin, PinValue.Low);
                 GpioController?.Write(GpioSpiDcPin, PinValue.Low);
                 GpioController?.Write(GpioResetPin, PinValue.Low);
 
