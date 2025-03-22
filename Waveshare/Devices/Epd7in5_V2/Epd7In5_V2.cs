@@ -165,7 +165,7 @@ namespace Waveshare.Devices.Epd7in5_V2
             SendCommand(Epd7In5_V2Commands.BoosterSoftStart);
             SendData(0x17);
             SendData(0x17);
-            SendData(0x27);
+            SendData(0x28);
             SendData(0x17);
 
             SendCommand(Epd7In5_V2Commands.PowerOn);
@@ -179,7 +179,7 @@ namespace Waveshare.Devices.Epd7in5_V2
             SendData(0x03); // source 800
             SendData(0x20);
             SendData(0x01); // gate 480
-            SendData(0xe0);
+            SendData(0xE0);
 
             SendCommand(Epd7In5_V2Commands.DualSpi);
             SendData(0x00);
